@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta author="alon kerklies" />
     <!-- style-->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- fonts-->
 
@@ -163,9 +163,11 @@
     <!-- main-content-->
     <div class="main-content">
       <!-- the top nav-->
+
       <div class="top_nav">
+        <div class="top_line"></div>
         <img src="./img/mag.svg" alt="mag" />
-        <p>Global search</p>
+        <p class="grey5">Global search</p>
         <img class="bell" src="./img/notifications.svg" alt="notifications" />
       </div>
       <!-- the top nav end-->
@@ -181,7 +183,7 @@
               8 task completed out of 10
               <!-- text to right---->
               <img class="alignright" src="./img/Polygon.svg" alt="pic1" />
-              <span class="alignright description grey5"> This week </span>
+              <span class="alignright description blue1"> This week </span>
               <span class="alignright description grey3"> Show: </span>
             </p>
             <div class="fullline"></div>
@@ -267,7 +269,7 @@
               <span class="nameforicon grey4">Lindsey Stroud</span>
               <button class="alignright">Completed</button>
             </div>
-            <p>Show More</p>
+            <p class="text_button">Show More</p>
           </div>
           <!-- the taskes end-->
         </div>
@@ -275,13 +277,139 @@
 
         <!-- right_side-->
         <div class="right_side">
+
+
+
+    <!-- graph box 1-->
           <div class="graph chart1">
-            <img src="./img/deals_graphic.png" alt="deals_graphic" />
+            <div class="graphtext">
+              <p class="alignleft headline">
+                Deals
+                <!-- text to right---->
+                <img class="alignright" src="./img/Polygon.svg" alt="pic1" />
+                <span class="alignright description blue1"> Monthly </span>
+                <span class="alignright description grey3"> Show: </span>
+              </p>
+
+              <div class="weakline"></div>
+
+              <div class="information_from_chart">
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="4"
+                    cy="4"
+                    r="3"
+                    stroke="#FFB946"
+                    stroke-width="2"
+                  />
+                </svg>
+                <span>Closed deals</span>
+              </div>
+            </div>
+
+            <div class="graphonly">
+              <img src="./img/deals_graphic.png" alt="deals_graphic" />
+            </div>
           </div>
 
+
+   <!-- graph box 2-->
+
           <div class="graph chart2">
-            <img src="./img/tasks_chart.png" alt="tasks_chart" />
+            <div class="graphtext">
+              <p class="alignleft headline">
+                Tasks
+                <!-- text to right---->
+                <img class="alignright" src="./img/Polygon.svg" alt="pic1" />
+                <span class="alignright description blue1"> This month </span>
+                <span class="alignright description grey3"> Show: </span>
+              </p>
+              <div class="weakline"></div>
+            </div>
+
+
+
+            <div class="graph_wide">
+
+
+                <div class="graphonly">
+                    <img src="./img/tasks_chart.svg" alt="deals_graphic" />
+                  </div>
+    
+
+
+
+                  <div class="graph_wide_text">
+                 <div class="information_from_chart">
+                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="4" cy="4" r="3" stroke="#FFB946" stroke-width="2"/>
+                 </svg>
+                  <span>Active</span>
+                   </div>
+
+
+
+                 
+                      <div class="information_from_chart">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <circle cx="4" cy="4" r="3" stroke="#2ED47A" stroke-width="2"/>
+                       </svg>
+                       <span>Completed</span>
+                    
+
+
+
+                       
+
+                
+                        <div class="information_from_chart">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="4" cy="4" r="3" stroke="#F7685B" stroke-width="2"/>
+                         </svg>
+                         <span>Ended</span>
+                  
+
+
+
+
+
+
+                  </div>
+
+
+            </div>
+         
+
+
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <!-- right_side end-->
       </div>

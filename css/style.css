@@ -41,6 +41,10 @@ span {
 .grey5 {
   color: #a5abb0;
 }
+.blue1 {
+  color: #109cf1;
+}
+
 /*------------- basic structure--------------*/
 
 .sidenav {
@@ -56,9 +60,10 @@ span {
 
 .top_nav {
   display: flex;
-  flex-basis: 111px;
-  height: 110px;
-  padding: 10px 15px;
+  position: relative;
+  max-height: 110px;
+
+  padding: 12px 15px;
 }
 
 .masa {
@@ -74,40 +79,15 @@ span {
   flex-direction: column;
 }
 
-.graph {
-  background-color: rgb(255, 255, 255);
-  flex: 1;
-  margin: 15px 15px 0 15px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-
-  /* align-items: center;*/
-}
-.chart1 .chart2 {
-}
-
-.chart1 img,
-.chart2 img {
-  max-width: 100%;
-
-  border-radius: 5px;
-}
-.chart2 img {
-  margin-bottom: 15px;
-}
-
 /*left side*/
 .left_side {
   flex: 1;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  margin: 15px 0 15px 15px;
+  margin: 30px 0 30px 30px;
   border-radius: 5px;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
@@ -119,8 +99,10 @@ span {
   margin-bottom: 20px;
 }
 
-.taskes {
+.graphtext span {
+  margin: 0px 0 0 5px;
 }
+
 /*------------- basic structure  end--------------*/
 
 /*--------------- top nav bar-----------------*/
@@ -158,7 +140,7 @@ span {
 .sidenav {
   font-size: 22px;
   padding: 14px 1.5% 24px 1.5%;
-  box-shadow: 4px 0px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 4px 0px 18px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -169,7 +151,7 @@ span {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 
 .sidenav li {
@@ -184,10 +166,21 @@ span {
 
 hr {
   z-index: 3;
-  margin: 50px 0 0 0;
+  margin: 30px -3% 0 -3%;
+  padding: 0;
   height: 1px;
   border: 0;
-  background-color: #cecece;
+  background-color: #e6e6e6;
+}
+
+.top_line {
+  position: fixed;
+  height: 1px;
+  background-color: #d8d8d8;
+  width: 100%;
+  left: 0;
+  top: 48px;
+  padding: 0;
 }
 
 .sidenav ul img {
@@ -205,7 +198,6 @@ hr {
   cursor: hand;
   color: #109cf1;
   stroke: #109cf1;
-  fill: #109bf16e;
 }
 
 svg {
@@ -215,8 +207,10 @@ svg {
   fill: transparent;
 }
 
-.sidenav li:last-child img {
+.sidenav li:last-child svg {
   margin: 0px 12px 2px 0;
+  fill: #a5abb0;
+  background-color: ;
 }
 
 /*---------------tast_box-----------------*/
@@ -241,22 +235,31 @@ svg {
 /*--------------task_completed----------------*/
 
 .task_completed {
-  margin: 16px;
+  margin: 20px;
 }
 
 .task_completed .headline {
   color: #323c47;
-  font-size: 17px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.task_completed p {
+  color: #323c47;
+  font-size: 15px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .task_completed img {
-  margin: 9px 0 0 5px;
+  margin: 7px 0 0 5px;
 }
 
 .task_completed span {
   margin: 0px 0 0 5px;
 }
+
 /*--------------task_completed  end----------------*/
 
 .tast_box .headline {
@@ -280,7 +283,7 @@ svg {
 
 /*---------------the tasks-----------------*/
 .tast_box {
-  margin: 12px 15px;
+  margin: 20px 20px;
   background-color: rgb(255, 255, 255);
   padding: 16px;
   position: relative;
@@ -294,7 +297,7 @@ svg {
 
 button {
   width: 84px;
-  height: 22px;
+  height: 25px;
   background-color: #2ed47a;
   color: white;
   border: 0;
@@ -337,11 +340,12 @@ button:hover:before {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 11px;
-  padding: 0 5px;
+  padding: 0 15px;
   margin: 0 5px; /*center*/
 }
 .dateSelect ul {
   list-style: none;
+
   /* width: 700px;*/
 }
 
@@ -351,15 +355,14 @@ button:hover:before {
   margin: 2%;
 }
 
-.dateSelect li span {
-}
-
 .dateSelect:first-child {
   color: #707683;
 }
 
-.dateSelect .day {
+.dateSelect li span:first-child {
   color: #192a3e;
+
+  margin-bottom: 44px;
 }
 
 .dateSelect:first-child li:first-child .day {
@@ -370,6 +373,7 @@ button:hover:before {
   border-radius: 55px;
   display: inline-block;
   padding: 3px;
+  margin-top: 5px;
 }
 
 .dateSelect li:nth-child(2),
@@ -385,6 +389,95 @@ button:hover:before {
   border-radius: 55px;
   display: inline-block;
   padding: 3px;
+}
+
+/*
+.taskes:last-child p:last-child{
+    background-color: #2ed47a;
+}
+*/
+
+.text_button {
+  margin-top: 30px;
+  text-align: center;
+  color: #109cf1;
+  font-weight: 600;
+}
+
+/*------------- graphsss-------------*/
+
+.graph {
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  margin: 30px 30px 0 30px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart1 img,
+.chart2 img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.graphonly {
+  margin: auto;
+}
+
+.chart1 img,
+.chart2 img {
+  margin: 7px 0 0 5px;
+}
+
+.weakline {
+  height: 1px;
+  background-color: #e4e4e4;
+  margin: 0 -20px;
+  margin-top: 15px;
+}
+
+.graphtext {
+  margin-bottom: 20px;
+  align-self: stretch;
+}
+
+.graphtext p {
+  color: #192a3e;
+  font-weight: 600;
+}
+
+.information_from_chart {
+  margin-top: 15px;
+}
+
+.information_from_chart span {
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.information_from_chart svg {
+  margin: 0;
+}
+
+.graph_wide {
+  width: 100%;
+  display: flex;
+}
+
+.graph_wide_text {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.graph_wide .graphonly {
+  margin-right: 15px;
 }
 
 @media screen and (max-width: 990px) {
