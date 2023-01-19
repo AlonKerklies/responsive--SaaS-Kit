@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box; /*  */
+  margin: 0;
+  padding: 0;
+  /*border: 1px soliyd rgb(106, 238, 255);*/
+}
+
+html,
+body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+.grey1 {
+  color: #192a3e;
+}
+.grey2 {
+  color: #323c47;
+}
+.grey3 {
+  color: #4c5862;
+}
+.grey4 {
+  color: #707683;
+}
+.grey5 {
+  color: #a5abb0;
+}
+/*------------- basic structure--------------*/
+
+.sidenav {
+  flex-basis: 20%;
+  min-width: 230px;
+}
+.main-content {
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top_nav {
+  display: flex;
+  flex-basis: 111px;
+  height: 110px;
+  padding: 10px 15px;
+}
+
+.masa {
+  flex-grow: 1;
+  background-color: #e5e5e5;
+  display: flex;
+}
+
+/*right_side*/
+.right_side {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.graph {
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  margin: 15px 15px 0 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  /* align-items: center;*/
+}
+.chart1 .chart2 {
+}
+
+.chart1 img,
+.chart2 img {
+  max-width: 100%;
+
+  border-radius: 5px;
+}
+.chart2 img {
+  margin-bottom: 15px;
+}
+
+/*left side*/
+.left_side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin: 15px 0 15px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.task_completed {
+  margin-bottom: 30px;
+}
+
+.week {
+  margin-bottom: 20px;
+}
+
+.taskes {
+}
+/*------------- basic structure  end--------------*/
+
+/*--------------- top nav bar-----------------*/
+.top_nav p {
+  align-self: center;
+  margin: 0 0 0 5px;
+}
+.bell {
+  margin-left: auto;
+}
+
+/*--------------- side nav bar-----------------*/
+.profile_name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  /*float: right;*/
+}
+
+.profile_mail {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  margin-bottom: 30px;
+  /*float: right;*/
+}
+
+.sidenav > img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.sidenav {
+  font-size: 22px;
+  padding: 14px 1.5% 24px 1.5%;
+  box-shadow: 4px 0px 18px rgba(0, 0, 0, 0.06);
+  z-index: 1;
+}
+
+.sidenav .headline {
+  color: #109cf1;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 22px;
+}
+
+.sidenav li {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  margin: auto;
+
+  margin: 18px 0 0 0;
+  display: block;
+}
+
+hr {
+  z-index: 3;
+  margin: 50px 0 0 0;
+  height: 1px;
+  border: 0;
+  background-color: #cecece;
+}
+
+.sidenav ul img {
+  margin: 0 12px -6px 0;
+}
+
+.sidenav li span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidenav li span:hover,
+.sidenav li span:hover svg {
+  cursor: hand;
+  color: #109cf1;
+  stroke: #109cf1;
+  fill: #109bf16e;
+}
+
+svg {
+  margin: 0 12px 0px 0;
+  stroke: #109cf1;
+  stroke: #a5abb0;
+  fill: transparent;
+}
+
+.sidenav li:last-child img {
+  margin: 0px 12px 2px 0;
+}
+
+/*---------------tast_box-----------------*/
+
+/*---------------progressline-----------------*/
+.progressline {
+  width: 80%;
+  margin: -4px 0 10px 0;
+  height: 4px;
+  background-color: #2ed47a;
+  border-radius: 100px;
+}
+
+.fullline {
+  width: 100%;
+  height: 4px;
+  background-color: #ebeff2;
+  border-radius: 100px;
+}
+/*---------------progressline end-----------------*/
+
+/*--------------task_completed----------------*/
+
+.task_completed {
+  margin: 16px;
+}
+
+.task_completed .headline {
+  color: #323c47;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.task_completed img {
+  margin: 9px 0 0 5px;
+}
+
+.task_completed span {
+  margin: 0px 0 0 5px;
+}
+/*--------------task_completed  end----------------*/
+
+.tast_box .headline {
+  color: #323c47;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 500;
+  margin: 4px 0 5px 0;
+}
+
+.description {
+  font-size: 12px;
+}
+
+.alignleft {
+  text-align: left;
+}
+.alignright {
+  float: right;
+}
+
+/*---------------the tasks-----------------*/
+.tast_box {
+  margin: 12px 15px;
+  background-color: rgb(255, 255, 255);
+  padding: 16px;
+  position: relative;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.18);
+  border-radius: 5px;
+}
+
+.tast_box img {
+  margin: 20px 10px -6px 0;
+}
+
+button {
+  width: 84px;
+  height: 22px;
+  background-color: #2ed47a;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+
+  font-size: 11px;
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f7685b;
+
+  cursor: hand;
+}
+
+button:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translatex(-100%);
+  margin: 0 0 0 -10px;
+  display: inline-block;
+
+  background-size: 60px 20px;
+
+  width: 60px;
+  height: 20px;
+  content: "";
+
+  background-image: url("../img/hover.svg");
+}
+
+/*---------------dateSelect-----------------*/
+
+.dateSelect {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 11px;
+  padding: 0 5px;
+  margin: 0 5px; /*center*/
+}
+.dateSelect ul {
+  list-style: none;
+  /* width: 700px;*/
+}
+
+.dateSelect li {
+  display: inline;
+  text-align: center;
+  margin: 2%;
+}
+
+.dateSelect li span {
+}
+
+.dateSelect:first-child {
+  color: #707683;
+}
+
+.dateSelect .day {
+  color: #192a3e;
+}
+
+.dateSelect:first-child li:first-child .day {
+  background-color: #109cf1;
+  color: #ffffff;
+  height: 25px;
+  width: 25px;
+  border-radius: 55px;
+  display: inline-block;
+  padding: 3px;
+}
+
+.dateSelect li:nth-child(2),
+.dateSelect :nth-child(2) .day {
+  color: #109cf1;
+}
+
+.dateSelect li:hover > .day {
+  background-color: #109cf1;
+  color: #ffffff;
+  height: 25px;
+  width: 25px;
+  border-radius: 55px;
+  display: inline-block;
+  padding: 3px;
+}
+
+@media screen and (max-width: 990px) {
+  .sidenav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .sidenav {
+    display: none;
+  }
+
+  .masa {
+    flex-direction: column;
+  }
+
+  .left_side {
+    margin: 15px;
+  }
+}
